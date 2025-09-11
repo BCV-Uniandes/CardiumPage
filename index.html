@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1"-->
+  <title>CARDIUM: Congenital Anomaly Recognition with Diagnostic Images and Unified Medical Records</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="index.html">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <a class="navbar-item" href="dataset.html">
+        Dataset Stats
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CARDIUM: Congenital Anomaly Recognition with Diagnostic Images and Unified Medical Records</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Daniela Vega<sup>1</sup>, </span>
+            <span class="author-block">
+              Hannah V. Ceballos<sup>1</sup>, </span>
+            <span class="author-block">
+              Javier S. Vera<sup>1</sup>, </span>
+            <span class="author-block">
+              Santiago Rodriguez<sup>1</sup>, </span>
+            <span class="author-block">
+              Alejandra Perez<sup>1</sup>, </span>
+            <span class="author-block">
+              Angela Castillo<sup>1</sup>, </span>
+            <span class="author-block">
+              Maria Escobar<sup>1</sup>, </span>
+            <span class="author-block">
+              Dario Londoño<sup>1</sup><sup>2</sup>, </span>
+            <span class="author-block">
+              Luis A. Sarmiento<sup>1</sup><sup>2</sup>, </span>
+            <span class="author-block">
+              Camila I. Castro<sup>1</sup>, </span>
+            <span class="author-block">
+              Nadiezhda Rodriguez<sup>1</sup><sup>2</sup>, </span>
+            <span class="author-block">
+              Juan C. Briceño<sup>1</sup>, </span>
+            <span class="author-block">
+              Pablo Arbelaez<sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Universidad de los Andes, Colombia;</span>
+            <span class="author-block"><sup>2</sup>Fundación Santa Fe de Bogotá, Colombia</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/BCV-Uniandes/Cardium"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Prenatal diagnosis of Congenital Heart Diseases (CHDs) holds great potential for Artificial Intelligence (AI)-driven solutions. 
+            However, collecting high-quality diagnostic data remains difficult due to the rarity of these conditions, resulting in imbalanced 
+            and low-quality datasets that hinder model performance. Moreover, no public efforts have been made to integrate multiple sources 
+            of information, such as imaging and clinical data, further limiting the ability of AI models to support and enhance clinical 
+            decision-making.
+          </p>
+          <p>
+            To overcome these challenges, we introduce the <b>C</b>ongenital <b>A</b>nomaly <b>R</b>ecognition with 
+            <b>D</b>iagnostic <b>I</b>mages and <b>U</b>nified <b>M</b>edical records (CARDIUM) dataset, the first publicly available 
+            multimodal dataset consolidating fetal ultrasound and echocardiographic images along with maternal clinical records for prenatal 
+            CHD detection. Furthermore, we propose a robust multimodal transformer architecture that incorporates a cross-attention mechanism 
+            to fuse feature representations from image and tabular data, improving CHD detection by 11% and 50% over image and tabular 
+            single-modality approaches, respectively, and achieving an F1-score of 79.8 ± 4.8% in the CARDIUM dataset. We will publicly 
+            release our dataset and code to encourage further research on this unexplored field.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<section class="section">
+  <!-- Paper video. -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="content">
+        <h1 class="title is-3">CARDIUM Model Overview</h1>
+          <div class="content has-text-justified">
+            <p>
+              Our proposed multimodal transformer architecture integrates diagnostic images and clinical data for improved prenatal CHD detection.
+            </p>
+          </div>
+          <img src="./static/images/model.jpg" alt="CARDIUM Model Diagram">
+      </div>
+    </div>
+  </div>
+</section>"
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Overall Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            We train and evaluate our model on the CARDIUM dataset, resulting on improved performance metrics compared to each modality separately.
+          </p>
+          <div class="columns is-centered">
+            <!--img src="./static/images/overall_results.png" alt="Results Table" -->
+            <table class="latex-style">
+              <thead>
+                <tr>
+                  <th>Images</th>
+                  <th>Clinical Data</th>
+                  <th>CHD F1 Score</th>
+                  <th>CHD Precision</th>
+                  <th>CHD Recall</th>
+                  <th>AUC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td><strong>0.798 ± 0.048</strong></td>
+                  <td><strong>0.876 ± 0.173</strong></td>
+                  <td><strong>0.757 ± 0.104</strong></td>
+                  <td><strong>0.974 ± 0.012</strong></td>
+                </tr>
+                <tr>
+                  <td>✓</td>
+                  <td></td>
+                  <td>0.689 ± 0.066</td>
+                  <td>0.659 ± 0.135</td>
+                  <td>0.742 ± 0.119</td>
+                  <td>0.955 ± 0.0154</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>✓</td>
+                  <td>0.294 ± 0.019</td>
+                  <td>0.192 ± 0.019</td>
+                  <td>0.634 ± 0.049</td>
+                  <td>0.794 ± 0.028</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+          
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Results per Trimester</h3>
+        <div class="content has-text-justified">
+          <p>
+            In addition to overall performance, we also evaluate our model's effectiveness across the 
+            different trimesters of pregnancy in the CARDIUM dataset.
+          </p>
+          <div class="columns is-centered">
+            <!--img src="./static/images/trimestrers.png" alt="Results trimesters Table"-->
+            <table class="latex-style">
+              <thead>
+                <tr>
+                  <th>Trimester</th>
+                  <th>CHD F1 Score</th>
+                  <th>CHD Precision</th>
+                  <th>CHD Recall</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>First</td>
+                  <td>0.222 ± 0.314</td>
+                  <td>0.333 ± 0.471</td>
+                  <td>0.167 ± 0.236</td>
+                </tr>
+                <tr>
+                  <td>Second</td>
+                  <td>0.603 ± 0.092</td>
+                  <td>0.701 ± 0.212</td>
+                  <td>0.556 ± 0.101</td>
+                </tr>
+                <tr>
+                  <td>Third</td>
+                  <td>0.732 ± 0.072</td>
+                  <td>0.825 ± 0.127</td>
+                  <td>0.669 ± 0.074</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="content has-text-centered">
+          
+        </div>
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{.,
+  author    = {.},
+  title     = {.},
+  journal   = {ICCV},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website uses the template from this <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
