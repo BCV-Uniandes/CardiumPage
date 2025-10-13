@@ -59,7 +59,7 @@
       </a>
 
       <a class="navbar-item" href="dataset.html">
-        Dataset Stats
+        Dataset
       </a>
     </div>
 
@@ -257,14 +257,20 @@
                 </tr>
               </tbody>
             </table>
-
-
           </div>
-          
         </div>
         <br/>
         <!--/ Interpolating. -->
-
+        <div class="content has-text-centered">
+          <img src="./static/images/features.jpg" alt="CARDIUM Dataset Features">
+          <figcaption class="content has-text-justified">
+              <b>A) <i>MLP-Fusion:</i></b> concatenate modality features, then process them with an MLP.
+              <b>B) <i>Transformer Encoder Fusion:</i></b> concatenate features, then process them with a transformer encoder.
+              <b>C) <i>Transformer Decoder Fusion:</i></b> process image features with a decoder, then integrate tabular features through cross-attention.
+              <b>D) <i>Transformer Encoder with Cross-Attention Fusion:</i></b> each modality is encoded separately, then fused via cross-attention.
+          </figcaption>
+        </div>
+        
         <!-- Re-rendering. -->
         <h3 class="title is-4">Results per Trimester</h3>
         <div class="content has-text-justified">
@@ -334,7 +340,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!--<div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -342,7 +348,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">

@@ -138,9 +138,6 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
-
 .interpolation-panel .slider {
   margin: 0 !important;
 }
@@ -156,28 +153,86 @@ body {
   border-radius: 5px;
 }
 
-table.latex-style {
-  border-collapse: collapse;
-  margin: 1em auto;
-  font-family: "Times New Roman", serif;
-  text-align: center;
-  width: 80%;
+/* ===== CARDIUM – Tabla tipo paper (sin colgroup, sin cortes) ===== */
+.latex-table-wrap { margin-top: .75rem; }
+
+table.latex-table{
+  /* posiciona las dos dobles líneas con variables (ajústalas si quieres) */
+  --sep1: 17.2%;   /* separación entre col 1 y 2 */
+  --sep2: 38.6%;   /* separación entre col 2 y 3 */
+  --gap: 6px;      /* distancia entre las 2 líneas de cada separador */
+  --lw: 1px;       /* grosor de cada línea */
+  --ink: #2b2b2b;
+
+  width: 100%;
+  border-collapse: separate;   /* importante para que el fondo no se “coma” bordes */
+  border-spacing: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: .96rem;
+  line-height: 1.35;
+
+  /* Marco exterior y reglas horizontales gruesas */
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  border-right: 1px solid var(--ink);
+
+  /* Alineación base (evita has-text-centered) */
+  text-align: left;
+
+  /* === DIBUJO DE LAS 2 DOBLES LÍNEAS (CONTINUAS) === */
+  background-image:
+    /* separador 1 – línea 1 y 2 */
+    linear-gradient(to right, transparent calc(var(--sep1) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep1) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep1) + var(--lw)/2),
+                             transparent    calc(var(--sep1) + var(--lw)/2)),
+    linear-gradient(to right, transparent calc(var(--sep1) + var(--gap) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep1) + var(--gap) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep1) + var(--gap) + var(--lw)/2),
+                             transparent    calc(var(--sep1) + var(--gap) + var(--lw)/2)),
+    /* separador 2 – línea 1 y 2 */
+    linear-gradient(to right, transparent calc(var(--sep2) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep2) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep2) + var(--lw)/2),
+                             transparent    calc(var(--sep2) + var(--lw)/2)),
+    linear-gradient(to right, transparent calc(var(--sep2) + var(--gap) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep2) + var(--gap) - var(--lw)/2),
+                             var(--ink)     calc(var(--sep2) + var(--gap) + var(--lw)/2),
+                             transparent    calc(var(--sep2) + var(--gap) + var(--lw)/2));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-table.latex-style thead tr th {
-  border-bottom: 2px solid black; /* \toprule */
-  font-weight: bold;
-  padding: 6px 4px;
+.latex-table th,
+.latex-table td{
+  padding: 6px 10px;           /* texto más cercano a las reglas */
+  vertical-align: top;
+  border: 0;                   /* sin bordes por celda (evita dientes) */
+  text-align: left !important;
 }
 
-table.latex-style tbody tr td {
-  padding: 6px 4px;
+/* Encabezado: línea inferior fina */
+.latex-table thead th{
+  border-bottom: 1px solid var(--ink);
+  font-weight: 700;
 }
 
-table.latex-style tbody tr:first-child td {
-  border-top: 1px solid black; /* \midrule */
+/* Línea superior para cada bloque (Categorical / Ordinal / Numerical) */
+.section-start > td,
+.section-start > th{
+  border-top: 1.6px solid var(--ink);
 }
 
-table.latex-style tbody tr:last-child td {
-  border-bottom: 2px solid black; /* \bottomrule */
+/* Primera columna (etiqueta de bloque) */
+.var-type{
+  white-space: nowrap;
+  font-weight: 700;
+  text-align: left !important;
+  padding-right: .75rem;
+}
+
+/* Responsive mínimo */
+@media (max-width: 860px){
+  .latex-table th, .latex-table td{ padding: 6px 8px; font-size: .94rem; }
 }

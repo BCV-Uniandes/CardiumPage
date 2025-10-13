@@ -38,7 +38,7 @@
       </a>
 
       <a class="navbar-item" href="dataset.html">
-        Dataset Stats
+        Dataset
       </a>
     </div>
 
@@ -64,42 +64,179 @@
     <div class="columns is-centered has-text-centered">
       <div class="content">
         <h1 class="title is-3">Statistics</h1>
-          <div class="content has-text-justified">
-            <p>
-              Here are some statistics about the CARDIUM dataset: 
-              <ol type="A">
-                <li>
-                    Number of patients with and without CHD (left) and number of images corresponding to patients with and without CHD (right).
-                </li>
-                <li>
-                    Trimester distribution: The inner circle represents the overall number of patients with images from the first, second, 
-                    and third trimesters, while the outer circle distinguishes between positive (darker) and negative (lighter) cases. On the 
-                    right, we present the percentage of the total dataset corresponding to each gestational period.
-                </li>
-                <li>
-                    Distribution of different types of CHDs present in our dataset.
-                </li>
-                <li>
-                    Number of patients with and without CHD per fold.
-                </li>
-            </ol>
-            </p>
-          </div>
           <img src="./static/images/dataset_statistics.jpg" alt="CARDIUM Dataset Statistics">
+          <figcaption class="content has-text-justified">
+              <b>A)</b> Number of patients with and without CHD (left) and number of images corresponding to patients with and without CHD (right).
+              <b>B)</b> Trimester distribution: The inner circle represents the overall number of patients with images from the first, second, 
+              and third trimesters, while the outer circle distinguishes between positive (darker) and negative (lighter) cases. On the 
+              right, we present the percentage of the total dataset corresponding to each gestational period.
+              <b>C)</b> Distribution of different types of CHDs present in our dataset.
+              <b>D)</b> Number of patients with and without CHD per fold.
+          </figcaption>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="content">
+        <h1 class="title is-3">Dataset Variables</h1>
+    </div>
+  </div>
+    <div class="container is-max-desktop">
+      <div class="latex-table-wrap">
+        <table class="latex-table">
+          
+          <thead>
+            <tr>
+              <th class="left-col">Variable Type</th>
+              <th class="center-col">Category</th>
+              <th class="right-col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- CATEGORICAL -->
+            <tr class="section-start">
+              <td class="var-type" rowspan="3">Categorical variables</td>
+              <td class="align-right">Pathological history</td>
+              <td class="align-right">Patient’s previous or existing medical conditions.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Family medical history</td>
+              <td class="align-right">Patient’s family history of hereditary medical conditions.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Pharmacological history</td>
+              <td class="align-right">Patient’s current or past use of medications.</td>
+            </tr>
 
-    
+            <!-- ORDINAL -->
+            <tr class="section-start">
+              <td class="var-type" rowspan="9">Ordinal variables</td>
+              <td class="align-right">Chromosomal abnormality</td>
+              <td class="align-right">Indicates whether a chromosomal anomaly is present.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Screening</td>
+              <td class="align-right">Indicates whether the patient underwent screening procedures.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Thromboembolic risk</td>
+              <td class="align-right">Patient’s assessed risk of thromboembolic events (low, intermediate, or high).</td>
+            </tr>
+            <tr>
+              <td class="align-right">Psychosocial risk</td>
+              <td class="align-right">Patient’s assessed level of psychosocial vulnerability (low, intermediate, or high).</td>
+            </tr>
+            <tr>
+              <td class="align-right">Depression screening</td>
+              <td class="align-right">Patient’s depression risk level based on screening results (low, intermediate, or high).</td>
+            </tr>
+            <tr>
+              <td class="align-right">Tobacco use</td>
+              <td class="align-right">Indicates whether the patient smoked or has smoked during pregnancy.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Nutritional deficiencies</td>
+              <td class="align-right">Indicates whether the patient has been diagnosed with nutritional deficiencies.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Alcohol use</td>
+              <td class="align-right">Indicates whether the patient consumes alcohol during pregnancy.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Physical activity</td>
+              <td class="align-right">Indicates whether the patient engages in regular physical exercise.</td>
+            </tr>
+
+            <!-- NUMERICAL -->
+            <tr class="section-start">
+              <td class="var-type" rowspan="14">Numerical variables</td>
+              <td class="align-right">Age</td>
+              <td class="align-right">Maternal age.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Imaging week</td>
+              <td class="align-right">Gestational week when the ultrasound image was acquired.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Gestational week</td>
+              <td class="align-right">Week of pregnancy at the time of data collection.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Body Mass Index</td>
+              <td class="align-right">Maternal body mass index.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Pregnancies</td>
+              <td class="align-right">Total number of pregnancies (excluding the current one).</td>
+            </tr>
+            <tr>
+              <td class="align-right">Vaginal births</td>
+              <td class="align-right">Number of previous vaginal deliveries.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Cesarean sections</td>
+              <td class="align-right">Number of previous cesarean deliveries.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Miscarriages</td>
+              <td class="align-right">Number of previous spontaneous abortions.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Ectopic pregnancies</td>
+              <td class="align-right">Number of previous ectopic pregnancies.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Platelets</td>
+              <td class="align-right">Blood platelet count.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Hemoglobin</td>
+              <td class="align-right">Hemoglobin concentration in the blood.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Hematocrit</td>
+              <td class="align-right">Hematocrit percentage.</td>
+            </tr>
+            <tr>
+              <td class="align-right">White blood cells</td>
+              <td class="align-right">Total leukocyte count.</td>
+            </tr>
+            <tr>
+              <td class="align-right">Neutrophils</td>
+              <td class="align-right">Neutrophil count.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </section>
+  
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="content">
+        <h1 class="title is-3">Visual Examples</h1>
+        <img src="./static/images/collage.png" alt="CARDIUM Dataset Statistics">
+          <figcaption class="content has-text-justified">
+              Here we present a collage of six representative ultrasound images from the CARDIUM dataset.
+              
+          </figcaption>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!--<div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -107,7 +244,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
@@ -120,6 +257,8 @@
     </div>
   </div>
 </footer>
+
+
 
 </body>
 </html>
